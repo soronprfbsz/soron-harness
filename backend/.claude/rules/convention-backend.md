@@ -26,7 +26,7 @@
 
 ### API
 - RESTful, 복수형 리소스명, BaseResponse 래핑
-- URL prefix: /api
+- URL prefix: /api/
 
 ### TDD
 - 테스트 먼저 → 최소 구현 → 리팩터
