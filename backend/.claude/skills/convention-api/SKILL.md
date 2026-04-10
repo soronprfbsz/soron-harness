@@ -48,6 +48,7 @@ async def get_users(service: UserService = Depends(get_user_service)):
 - HTTP 상태코드 준수: 400(잘못된 요청), 404(미존재), 422(검증 실패), 500(서버 오류)
 - 커스텀 예외 → exception handler에서 BaseResponse 형태로 변환
 
-## 버저닝
-- URL prefix: `/api/v1/users`
-- main.py에서 `app.include_router(router, prefix="/api/v1")`
+## URL 구조
+- prefix: `/api/users`
+- main.py에서 `app.include_router(router, prefix="/api")`
+- 버저닝이 필요한 경우 헤더 기반 또는 별도 협의
