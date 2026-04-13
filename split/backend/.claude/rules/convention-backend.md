@@ -1,21 +1,16 @@
----
-paths:
-  - "backend/**"
----
-
 # Backend Conventions
 
-이 프로젝트의 백엔드 코드 작성 시 아래 컨벤션을 반드시 준수하세요.
+이 프로젝트의 코드 작성 시 아래 컨벤션을 반드시 준수하세요.
 상세 내용은 링크된 스킬 파일을 참고합니다.
 
 ## 적용 스킬
-- [네이밍 규칙](backend/.claude/skills/convention-backend-naming/SKILL.md)
-- [프로젝트 구조](backend/.claude/skills/convention-backend-project-structure/SKILL.md)
-- [API 설계](backend/.claude/skills/convention-backend-api/SKILL.md)
-- [TDD](backend/.claude/skills/convention-backend-tdd/SKILL.md)
-- [Git 컨벤션](.claude/skills/convention-git/SKILL.md)
-- [DB 네이밍](backend/.claude/skills/convention-backend-database/SKILL.md)
-- [코드 리뷰](.claude/skills/convention-code-review/SKILL.md)
+- [네이밍 규칙](.claude/skills/convention-backend-naming/SKILL.md)
+- [프로젝트 구조](.claude/skills/convention-backend-project-structure/SKILL.md)
+- [API 설계](.claude/skills/convention-backend-api/SKILL.md)
+- [TDD](.claude/skills/convention-backend-tdd/SKILL.md)
+- [Git 컨벤션](.claude/skills/convention-backend-git/SKILL.md)
+- [DB 네이밍](.claude/skills/convention-backend-database/SKILL.md)
+- [코드 리뷰](.claude/skills/convention-backend-code-review/SKILL.md)
 
 ## 핵심 요약 (Quick Reference)
 

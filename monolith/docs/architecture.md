@@ -24,7 +24,7 @@ project/
 │       ├── common/
 │       │   ├── config.py
 │       │   ├── database.py
-│       │   ├── middlewares/
+│       │   ├── middleware/
 │       │   ├── exceptions/
 │       │   ├── logging/
 │       │   ├── models/

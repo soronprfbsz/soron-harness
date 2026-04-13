@@ -74,7 +74,7 @@ app/
 ├── common/
 │   ├── config.py
 │   ├── database.py
-│   ├── middlewares/
+│   ├── middleware/
 │   ├── exceptions/
 │   ├── logging/
 │   ├── models/
@@ -158,7 +158,7 @@ PreToolUse 훅으로 매 Write/Edit 시 주입되는 파일.
 - 함수/변수: snake_case | 클래스: PascalCase | 상수: UPPER_SNAKE
 ### 구조
 - 도메인별: domains/{name}/ 하위에 routers/services/repositories/schemas/models
-- 공통: common/ 하위에 config, database, middlewares, exceptions, logging, models, utils
+- 공통: common/ 하위에 config, database, middleware, exceptions, logging, models, utils
 ...
 ```
 

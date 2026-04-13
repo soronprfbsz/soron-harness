@@ -117,7 +117,7 @@ app/
 ├── common/            # 공통 인프라
 │   ├── config.py            # 환경 설정 (pydantic-settings)
 │   ├── database.py          # DB 엔진, 세션 팩토리
-│   ├── middlewares/         # CORS, 인증 등
+│   ├── middleware/         # CORS, 인증 등
 │   ├── exceptions/          # 커스텀 예외, 핸들러
 │   ├── logging/             # 로깅 설정
 │   ├── models/              # 공통 모델 (Base, TimestampMixin)
@@ -366,7 +366,7 @@ git commit -m "feat(backend): add convention skills"
 
 ### 구조 (DDD)
 - 도메인별: domains/{name}/ 하위에 routers, services, repositories, schemas, models
-- 공통: common/ 하위에 config.py, database.py, middlewares/, exceptions/, logging/, models/, utils/
+- 공통: common/ 하위에 config.py, database.py, middleware/, exceptions/, logging/, models/, utils/
 - 의존 방향: routers → services → repositories (단방향)
 - 도메인 간 의존: service → service만 허용
 
@@ -435,7 +435,7 @@ app/
 ├── common/
 │   ├── config.py            # 환경 설정
 │   ├── database.py          # DB 엔진, 세션
-│   ├── middlewares/         # 미들웨어
+│   ├── middleware/         # 미들웨어
 │   ├── exceptions/          # 예외 처리
 │   ├── logging/             # 로깅
 │   ├── models/              # Base, Mixin

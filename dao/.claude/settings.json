@@ -1,0 +1,65 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker compose *)",
+      "Bash(make *)",
+      "Bash(git *)",
+      "Bash(mkdir *)",
+      "Bash(ls *)",
+      "Bash(curl *)",
+      "Bash(cd *)",
+      "Bash(source *)",
+      "Bash(go *)",
+      "Bash(golangci-lint *)",
+      "Bash(pytest *)",
+      "Bash(python *)",
+      "Bash(ruff *)",
+      "Bash(mypy *)",
+      "Bash(alembic *)",
+      "Bash(uvicorn *)",
+      "Bash(uv *)",
+      "Bash(pip *)",
+      "Bash(npm *)",
+      "Bash(npx *)"
+    ],
+    "deny": []
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/pre_write.py"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // .tool_response.filePath' | { read -r f; case \"$f\" in *.py) ruff format --quiet \"$f\" ;; esac; } 2>/dev/null || true",
+            "timeout": 15,
+            "statusMessage": "ruff format..."
+          },
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // .tool_response.filePath' | { read -r f; case \"$f\" in *.ts|*.tsx) cd web && npx eslint --fix \"../$f\" ;; esac; } 2>/dev/null || true",
+            "timeout": 30,
+            "statusMessage": "eslint --fix..."
+          },
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // .tool_response.filePath' | { read -r f; case \"$f\" in *.go) gofmt -w \"$f\" ;; esac; } 2>/dev/null || true",
+            "timeout": 15,
+            "statusMessage": "gofmt..."
+          }
+        ]
+      }
+    ]
+  }
+}

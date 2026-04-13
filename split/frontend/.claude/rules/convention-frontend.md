@@ -1,21 +1,16 @@
----
-paths:
-  - "frontend/**"
----
-
 # Frontend Conventions
 
-이 프로젝트의 프론트엔드 코드 작성 시 아래 컨벤션을 반드시 준수하세요.
+이 프로젝트의 코드 작성 시 아래 컨벤션을 반드시 준수하세요.
 상세 내용은 링크된 스킬 파일을 참고합니다.
 
 ## 적용 스킬
-- [네이밍 규칙](frontend/.claude/skills/convention-frontend-naming/SKILL.md)
-- [프로젝트 구조](frontend/.claude/skills/convention-frontend-project-structure/SKILL.md)
-- [컴포넌트 설계](frontend/.claude/skills/convention-frontend-component/SKILL.md)
-- [상태관리](frontend/.claude/skills/convention-frontend-state/SKILL.md)
-- [TDD](frontend/.claude/skills/convention-frontend-tdd/SKILL.md)
-- [Git 컨벤션](.claude/skills/convention-git/SKILL.md)
-- [코드 리뷰](.claude/skills/convention-code-review/SKILL.md)
+- [네이밍 규칙](.claude/skills/convention-frontend-naming/SKILL.md)
+- [프로젝트 구조](.claude/skills/convention-frontend-project-structure/SKILL.md)
+- [컴포넌트 설계](.claude/skills/convention-frontend-component/SKILL.md)
+- [상태관리](.claude/skills/convention-frontend-state/SKILL.md)
+- [TDD](.claude/skills/convention-frontend-tdd/SKILL.md)
+- [Git 컨벤션](.claude/skills/convention-frontend-git/SKILL.md)
+- [코드 리뷰](.claude/skills/convention-frontend-code-review/SKILL.md)
 
 ## 핵심 요약 (Quick Reference)
 
