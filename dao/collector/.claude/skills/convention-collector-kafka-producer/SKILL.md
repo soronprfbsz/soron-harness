@@ -9,9 +9,10 @@ description: Kafka Producer 규칙 (franz-go)
 - **franz-go** (twmb/franz-go)
 
 ## Key/Value 규칙
-- **Key**: `device_id` (같은 디바이스 → 같은 파티션 → 순서 보장)
+- **Key**: `device_id` (metrics/logs) / `trace_id` (traces) — 같은 키 → 같은 파티션 → 순서 보장
 - **Value**: JSON 직렬화 (`encoding/json`)
-- **토픽**: `metrics`, `logs`, `traces`, `events`
+- **토픽**: `metrics`, `logs`, `traces`
+- ⚠️ `events` 토픽은 collector가 발행하지 않는다. Consumer Layer에서 임계치 감지 후 발행.
 
 ## 배치 설정
 - 100건 또는 5초 timeout (Batch 프로세서에서 처리)

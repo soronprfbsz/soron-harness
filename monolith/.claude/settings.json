@@ -10,6 +10,19 @@
           }
         ]
       }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/post_write.py",
+            "timeout": 30,
+            "statusMessage": "formatting..."
+          }
+        ]
+      }
     ]
   }
 }

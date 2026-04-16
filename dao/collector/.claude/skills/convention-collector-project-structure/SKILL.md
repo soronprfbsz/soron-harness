@@ -18,7 +18,6 @@ collector/
 │   │   ├── metricparser/        # OID→metric_name, 단위 정규화
 │   │   ├── logparser/           # syslog/JSON→통합 스키마
 │   │   ├── deviceresolver/      # IP→device_id (PG + cache)
-│   │   ├── eventdetect/         # 임계치 위반→events 토픽
 │   │   └── schemanorm/          # 속성명·단위 표준화
 │   ├── exporter/
 │   │   └── kafka/               # Kafka 발행 (franz-go)

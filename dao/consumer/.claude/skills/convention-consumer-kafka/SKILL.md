@@ -14,6 +14,15 @@ description: Kafka Consumer 패턴 (confluent-kafka)
 - **enable.auto.commit**: `False` — 적재 성공 후 수동 커밋
 - **격리**: 토픽별 독립 프로세스 (장애 격리)
 
+## Event 발행 (Consumer Layer → events 토픽)
+
+`events` 토픽은 collector가 아닌 **Consumer Layer**에서 발행한다.
+
+- `metrics_consumer`, `logs_consumer`는 메시지를 저장소에 적재하면서 동시에 `eventdetector`로 임계치 위반을 검사한다.
+- 위반 감지 시 `producers/event_producer.py`로 `events` 토픽에 발행한다.
+- `events_consumer`는 `events` 토픽을 소비해 `alert_history` 테이블에 INSERT한다.
+- 발행 실패 시: 적재는 성공 처리, 발행만 재시도 3회 후 로깅 (적재/발행 독립)
+
 ## BaseConsumer ABC
 
 ```python
